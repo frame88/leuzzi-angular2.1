@@ -1,0 +1,205 @@
+
+#container-top {
+    overflow-y: hidden!important;
+    overflow-x: hidden!important;
+    height: 100vh;
+}
+
+.red {
+    animation: unrotate 2s infinite;
+}
+
+.blue {
+    animation: unrotate linear 7s infinite;
+    width: 150%;
+    position: absolute;
+    z-index: -1;
+}
+
+.green {
+    animation: rotate linear 3s infinite;
+    position: absolute;
+    z-index: -3;
+    left: 5em;
+    bottom: 3em;
+    width: 300px;
+}
+
+.yellow {
+    animation: rotate 4s infinite;
+    position: absolute;
+    z-index: -2;
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.626);
+    border-radius: 50%;
+    cursor: all-scroll;
+}
+
+// .logo:hover {
+//     transform: rotate(20deg) scale(1.1);
+//     transition-duration: 0.3s;
+// }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:focus {
+    border: 0px;
+    transition: 3s;
+}
+
+a:active {
+    border: 0px;
+    transition: 3s;
+}
+
+.title {
+    width: 100%;
+    background-color: orange;
+    border: 3px solid orange;
+    color: white;
+    padding: 1em 0em;
+    text-decoration: none;
+}
+
+.title:hover {
+    background-color: rgb(213, 139, 0);
+    border: 3px solid rgb(213, 139, 0);
+    letter-spacing: 0.6px;
+    transition-duration: 0.3s;
+}
+
+.card-site {
+    width: 250px;
+    margin: 1rem;
+    background-color: orange;
+    height: 100vh;
+
+    .descrizione {
+        color: orange;
+        padding: 0.5em;
+    }
+
+}
+
+.card-site:hover {
+    transform: scale(1.1);
+    transition-duration: 0.4s;
+
+    .descrizione {
+        color: white;
+        transition-duration: 0.7s;
+    }
+
+    a {
+        display:inline;
+    }
+}
+
+.bg-marco:hover, .bg-crypto:hover {
+    transform: scale(1.0);
+}
+
+.look {
+    display: none;
+    font-size: 120%;
+}
+
+.look:hover {
+    color: #60606096;
+}
+
+.look:hover i{
+    margin-right: -5px;
+    padding-left: 5px;
+    transition-duration: 0.3s;
+}
+
+.bg-emanuela {
+    background-image: url('../assets/images/palette.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+.bg-alex {
+    background-image: url('../assets/images/hospital.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+.bg-crypto {
+    background-image: url('../assets/images/coins.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    filter: saturate(20%);
+}
+
+.bg-marco {
+    background-image: url('../assets/images/video.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    filter: saturate(20%);
+}
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+@keyframes unrotate {
+
+    from {
+
+        transform:
+            rotate(359deg);
+
+    }
+
+
+    to {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+}
+
+
+@media screen and (max-width: 1312px) {
+    .disappear {
+        display: none;
+    }
+
+    .card-site {
+        height: 2vh;
+        margin: 2rem;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        margin-top: 60%;
+    }
+
+    .logo {
+        top: 10%;
+    }
+}
